@@ -7,3 +7,4 @@
 \.sw.$
 ^cover_db
 ^MANIFEST\.SKIP$
+^_darcs
