@@ -17,9 +17,11 @@ sub Devel::FIXME::rules {
 	}
 }
 
-warning_is {
+my ( $file, $line ) = ( quotemeta(__FILE__), __LINE__ ); # FIXME foo
+
+warning_like {
 	use_ok("Devel::FIXME");
-} "# FIXME: foo at " . __FILE__ . " line " . __LINE__ . ".", "emits proper FIXME"; # FIXME foo
+} qr/# FIXME: foo at $file line $line\.$/, "emits proper fixme";
 
 ok($INC{'Devel/FIXME.pm'}, "Now it has been loaded");
 

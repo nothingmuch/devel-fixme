@@ -44,14 +44,14 @@ unshift @INC, "t/lib/empty";
 
 warning_is {
 	require Text::Soundex;
-} { carped => "FIXME's magic sub is no longer first in \@INC at " . __FILE__ . " line " . __LINE__ }, "\@INC sub not first, instead scalar";
+} { carped => "FIXME's magic sub is no longer first in \@INC" }, "\@INC sub not first, instead scalar";
 
 my $called;
 $INC[0] = sub { $called = 1 };
 
 warning_is {
 	require Class::ISA;
-} { carped => "FIXME's magic sub is no longer first in \@INC at " . __FILE__ . " line " . __LINE__ }, "\@INC sub not first, instead other sub";
+} { carped => "FIXME's magic sub is no longer first in \@INC" }, "\@INC sub not first, instead other sub";
 
 ok($called, "other sub was called");
 
