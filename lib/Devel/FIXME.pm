@@ -383,7 +383,7 @@ to commit changes.
 
 Yuval Kogman <nothingmuch@woobling.org>
 
-=head1 COPYRIGHT & LICNESE
+=head1 COPYRIGHT & LICENSE
 
 	Copyright (c) 2004 Yuval Kogman. All rights reserved
 	This program is free software; you can redistribute
